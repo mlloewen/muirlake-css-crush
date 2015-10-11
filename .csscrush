@@ -1,9 +1,12 @@
 {
     "style.crush.css": {
         "imports": [
-            "css\/grid.css"
+            "css\/grid.css",
+            "css\/reset.css",
+            "css\/typography.css",
+            "css\/elements.css"
         ],
-        "datem_sum": 2883374418,
+        "datem_sum": 7219731764,
         "options": {
             "minify": "false",
             "formatter": "block",

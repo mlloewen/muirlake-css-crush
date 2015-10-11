@@ -1,0 +1,44 @@
+hr {
+    background-color: #34498a;
+    border: 0;
+    height: 2px;
+    margin-bottom: 1.5em;
+}
+ul, ol {
+    margin: 0 0 1.5em 1.5em;
+}
+ul {
+    list-style: disc;
+}
+li {
+    padding-top: 1em;
+}
+ol {
+    list-style: decimal;
+}
+ol ol {
+    list-style: lower-alpha;
+}
+ol ol ol {
+    list-style: lower-roman;
+}
+dt {
+    font-weight: bold;
+}
+dd {
+    margin: 0 1.5em 1.5em;
+}
+img {
+    height: auto; /* Make sure images are scaled correctly. */
+    max-width: 100%; /* Adhere to container width. */
+}
+figure {
+    margin: 0;
+}
+table {
+    margin: 0 0 1.5em;
+    width: 100%;
+}
+th {
+    font-weight: bold;
+}

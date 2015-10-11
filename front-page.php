@@ -30,23 +30,9 @@
     <div class="container">
         <h2>Welcome</h2>
 <?php
-    require_once  'css-crush/CssCrush.php';
-/*   echo csscrush_file('style.css');  */
     echo do_shortcode('[ml-post id=2885]');
 ?>
 
-    <div class="my-semantic-column-class3">
-        <p>dasfkjheflkdjsf</p>
-        <p>Just a nothre testasdf;j;kjre;l asdf;kja;fj ;dkasjf;lkjdasf ;kjdsf;lkj dasf ;kjdfs;jdsaf;kj reif;kjdfife;kj f en;knds ;hje ;hjd;ashfjpeh;dnjasg p;jsdf;ja;j ;kj p;re;ldj p;j; er ;</p>
-    </div>
-    <div class="my-semantic-column-class3">
-        <p>dasfkjheflkdjsf</p>
-        <p>Just a nothre testasdf;j;kjre;l asdf;kja;fj ;dkasjf;lkjdasf ;kjdsf;lkj dasf ;kjdfs;jdsaf;kj reif;kjdfife;kj f en;knds ;hje ;hjd;ashfjpeh;dnjasg p;jsdf;ja;j ;kj p;re;ldj p;j; er ;</p>
-    </div>
-    <div class="my-semantic-column-class3">
-        <p>dasfkjheflkdjsf</p>
-        <p>Just a nothre testasdf;j;kjre;l asdf;kja;fj ;dkasjf;lkjdasf ;kjdsf;lkj dasf ;kjdfs;jdsaf;kj reif;kjdfife;kj f en;knds ;hje ;hjd;ashfjpeh;dnjasg p;jsdf;ja;j ;kj p;re;ldj p;j; er ;</p>
-    </div>
     <div class="clearfix"></div>
 
         <div class="promo-links">

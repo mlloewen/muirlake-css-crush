@@ -48,9 +48,6 @@ and Blueprint http://www.blueprintcss.org/
 11.0 - Infinite scroll
 12.0 - Media
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-1.0 - Reset
---------------------------------------------------------------*/
 /* https://gist.github.com/croxton/5974307 */
 /* =============================================================================
    Variables
@@ -129,6 +126,10 @@ and Blueprint http://www.blueprintcss.org/
 /* span 6 cols at large breakpoint, 12 by default */
 
 /* span 4 cols at large breakpoint, 12 by default */
+
+/*--------------------------------------------------------------
+1.0 - Reset
+--------------------------------------------------------------*/
 html,
 body,
 div,
@@ -361,13 +362,21 @@ ul,
 ol {
     margin: 0 0 1.5em 1.5em;
     }
-
-/* ul {
+ul {
     list-style: disc;
-}
+    }
+li {
+    padding-top: 1em;
+    }
 ol {
     list-style: decimal;
-} */
+    }
+ol ol {
+    list-style: lower-alpha;
+    }
+ol ol ol {
+    list-style: lower-roman;
+    }
 dt {
     font-weight: bold;
     }
@@ -777,10 +786,7 @@ CONTENT
     background: #fff;
     padding: 25px 10px;
     -webkit-box-shadow: 0 4px 9px 0 rgba(177,194,187,.6);
-    -moz-box-shadow: 0 4px 9px 0 rgba(177,194,187,.6);
     box-shadow: 0 4px 9px 0 rgba(177,194,187,.6);
-    -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
     opacity: .9;
     }
 #main article {
@@ -856,7 +862,7 @@ FOOTER
     padding: 20px;
     text-align: center;
     background-image: url(images/gradent2.png);
-    background-size: 250px 70px;
+    background-size: 394px 66px;
     background-repeat: no-repeat;
     -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
