@@ -11,6 +11,9 @@
 if ( ! isset( $content_width ) ) {
     $content_width = 640; /* pixels */
 }
+// Minimize css
+define('CSS_MIN', true);
+define('CSS_PRODUCTION', true);
 /*
 Custom menu item
 */
@@ -99,7 +102,16 @@ function muir_lake_scripts() {
     wp_enqueue_script('jquery');
 /*    wp_enqueue_style( 'muir-lake-church-style', get_stylesheet_uri() ); */
 /* pre process the css with css-crush */
-    wp_enqueue_style( 'muir-lake-church-style', 'http://' . $_SERVER['HTTP_HOST'] . csscrush_file(get_template_directory() .'/style.css' , array('minify' => 'false' , 'formatter' => 'block' ) ));
+    if (CSS_PRODUCTION) {
+        wp_enqueue_style( 'muir-lake-church-style', get_template_directory_uri() . '/style.crush.css' );
+    } else {
+        if (WP_DEBUG or !CSS_MIN) {
+            wp_enqueue_style( 'muir-lake-church-style', 'http://' . $_SERVER['HTTP_HOST'] . csscrush_file(get_template_directory() . '/style.css' , array('minify' => 'false' , 'formatter' => 'block' ) ));
+        } else {
+            wp_enqueue_style( 'muir-lake-church-style', 'http://' . $_SERVER['HTTP_HOST'] . csscrush_file(get_template_directory() . '/style.css' ));
+        }
+    }
+
     wp_deregister_script('themename-style');
     wp_enqueue_script( 'muir-lake-church-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
     wp_enqueue_script( 'muir-lake-church-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );

@@ -47,7 +47,7 @@ and Blueprint http://www.blueprintcss.org/
 --------------------------------------------------------------*/
 
 
-@import "css/grid.css";
+/*@import "css/grid.css";*/
 /*--------------------------------------------------------------
 1.0 - Reset
 --------------------------------------------------------------*/
@@ -135,6 +135,7 @@ textarea {
 /*--------------------------------------------------------------
 5.0 Navigation
 --------------------------------------------------------------*/
+@import "css/nav.css";
 /*--------------------------------------------------------------
 5.1 Links
 --------------------------------------------------------------*/
@@ -153,31 +154,7 @@ a:active {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
-.main-navigation {
-    clear: both;
-    display: block;
-    float: left;
-    width: 100%;
-}
-.main-navigation ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-}
-.main-navigation li {
-    float: left;
-    position: relative;
-}
-.main-navigation a {
-    display: block;
-    text-decoration: none;
-}
 
-.main-navigation li:hover > a {
-}
-.main-navigation .current_page_item a,
-.main-navigation .current-menu-item a {
-}
 
 /*--------------------------------------------------------------
 6.0 Accessibility
@@ -256,17 +233,7 @@ div.aligncenter {
     clear: both;
 }
 
-/*--------------------------------------------------------------
-9.0 Widgets
---------------------------------------------------------------*/
 
-/* Make sure select elements fit in widgets */
-
-/* Search widget */
-
-/*--------------------------------------------------------------
-10.0 Content
---------------------------------------------------------------*/
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
@@ -392,10 +359,12 @@ h2 a, h3 a {
 HEADER
 ---------------------------------------*/
 #show-menu-button{
+/*    position: fixed;*/
     float: right;
     margin: 25px 25px 0 0;
     background-color: white;
     padding-top: 5px;
+    z-index: 8899;
 }
 
 .site-branding{
@@ -618,10 +587,12 @@ MEDIUM VIEWPORT
         float: left;
     }
 
+/*
     #show-menu-button{
         display: none;
     }
 
+*/
 
     .site-tagline{
         display: inline-block;

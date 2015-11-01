@@ -1,15 +1,15 @@
 {
     "style.crush.css": {
         "imports": [
-            "css\/grid.css",
             "css\/reset.css",
             "css\/typography.css",
-            "css\/elements.css"
+            "css\/elements.css",
+            "css\/nav.css"
         ],
-        "datem_sum": 7221774446,
+        "datem_sum": 7225737303,
         "options": {
-            "minify": "false",
-            "formatter": "block",
+            "minify": true,
+            "formatter": null,
             "versioning": true,
             "boilerplate": true,
             "vars": [],

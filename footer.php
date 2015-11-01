@@ -31,13 +31,13 @@
 <?php wp_footer(); ?>
 
 <script>
-	jQuery('#show-menu-button').click(function(){
-		if( jQuery('body').hasClass('show-menu') ){
-			jQuery('body').removeClass('show-menu');
-		} else {
-			jQuery('body').addClass('show-menu');
-		}
-	});
+    jQuery('#show-menu-button').click(function(){
+        if( jQuery('body').hasClass('show-menu') ){
+            jQuery('body').removeClass('show-menu');
+        } else {
+            jQuery('body').addClass('show-menu');
+        }
+    });
 </script>
 
 </body>
