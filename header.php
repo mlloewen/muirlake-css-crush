@@ -20,14 +20,19 @@
       type="image/png"
       href="/favicon.png">
 
-<script src="https://cdn.rawgit.com/aFarkas/lazysizes/f2191c629686a33396d488aa8af33fcfd8fcfd27/lazysizes.min.js" async=""></script>
+<!--<script src="https://cdn.rawgit.com/aFarkas/lazysizes/f2191c629686a33396d488aa8af33fcfd8fcfd27/lazysizes.min.js" async=""></script>-->
 <script>
-        function loadJS(u){var r=document.getElementsByTagName("script")[ 0 ],s=document.createElement("script");s.src=u;r.parentNode.insertBefore(s,r);}
-
-    /*	if(!window.HTMLPictureElement){  */
-            document.createElement('picture');
-            loadJS("https://cdn.rawgit.com/aFarkas/lazysizes/f2191c629686a33396d488aa8af33fcfd8fcfd27/plugins/respimg/ls.respimg.min.js");
-/*		} */
+    function loadJS(u){var r=document.getElementsByTagName("script")[ 0 ],s=document.createElement("script");s.src=u;r.parentNode.insertBefore(s,r);}
+    if(!window.HTMLPictureElement){
+        document.createElement('picture');
+        loadJS("https://cdn.jsdelivr.net/lazysizes/1.3.1/plugins/respimg/ls.respimg.min.js");
+    }
+    /*  fastclick initalization  */
+    if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+            FastClick.attach(document.body);
+        }, false);
+    }
 </script>
 <?php wp_head(); ?>
 
@@ -44,7 +49,10 @@
 
 <div id="page-container" class="hfeed site" >
     <header id="masthead" class="site-header" role="banner">
-        <a href="#" id="show-menu-button"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/menu-button.png"></a>
+        <a href="#" id="show-menu-button">
+             ≡
+            <!--<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/menu-button.png">-->
+        </a>
 
         <div class="container">
             <div class="site-branding">

@@ -97,8 +97,9 @@ add_action( 'widgets_init', 'muir_lake_widgets_init' );
  * Enqueue scripts and styles.
  */
 function muir_lake_scripts() {
+    // cdn jquery, fastclick, lazysizes
     wp_deregister_script('jquery');
-    wp_register_script('jquery','//cdn.jsdelivr.net/jquery/2.1.1/jquery.min.js');
+    wp_register_script('jquery','https://cdn.jsdelivr.net/g/jquery@2.1.4,fastclick@1.0.6,lazysizes@1.3.1');
     wp_enqueue_script('jquery');
 /*    wp_enqueue_style( 'muir-lake-church-style', get_stylesheet_uri() ); */
 /* pre process the css with css-crush */

@@ -361,10 +361,11 @@ HEADER
 #show-menu-button{
 /*    position: fixed;*/
     float: right;
-    margin: 25px 25px 0 0;
-    background-color: white;
-    padding-top: 5px;
+    margin: 25px 25px 0px 0px;
+    background-image: url('images/gradent2.png');
+    padding: 0.5rem;
     z-index: 8899;
+    font-size: 4rem;
 }
 
 .site-branding{
@@ -587,12 +588,9 @@ MEDIUM VIEWPORT
         float: left;
     }
 
-/*
     #show-menu-button{
         display: none;
     }
-
-*/
 
     .site-tagline{
         display: inline-block;
