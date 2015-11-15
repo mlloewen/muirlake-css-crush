@@ -14,6 +14,17 @@ if ( ! isset( $content_width ) ) {
 // Minimize css
 define('CSS_MIN', true);
 define('CSS_PRODUCTION', true);
+
+// Make sure featured images are enabled
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'NineSixty', 960 );
+add_filter( 'image_size_names_choose', 'wpshout_custom_sizes' );
+function wpshout_custom_sizes( $sizes ) {
+    return array_merge( $sizes, array(
+        'NineSixty' => __( '960 Width' ),
+    ) );
+}
+
 /*
 Custom menu item
 */
@@ -74,6 +85,7 @@ function muir_lake_setup() {
         'comment-form',
         'gallery',
     ) );
+
 }
 endif; // muir_lake_setup
 add_action( 'after_setup_theme', 'muir_lake_setup' );
