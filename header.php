@@ -20,13 +20,7 @@
       type="image/png"
       href="/favicon.png">
 
-<!--<script src="https://cdn.rawgit.com/aFarkas/lazysizes/f2191c629686a33396d488aa8af33fcfd8fcfd27/lazysizes.min.js" async=""></script>-->
 <script>
-    function loadJS(u){var r=document.getElementsByTagName("script")[ 0 ],s=document.createElement("script");s.src=u;r.parentNode.insertBefore(s,r);}
-    if(!window.HTMLPictureElement){
-        document.createElement('picture');
-        loadJS("https://cdn.jsdelivr.net/lazysizes/1.3.1/plugins/respimg/ls.respimg.min.js");
-    }
     /*  fastclick initalization  */
     if ('addEventListener' in document) {
         document.addEventListener('DOMContentLoaded', function() {
