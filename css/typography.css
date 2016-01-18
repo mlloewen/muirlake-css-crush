@@ -69,3 +69,6 @@ small {
 big {
     font-size: 125%;
 }
+ol ol {
+    list-style: lower-alpha;
+}
