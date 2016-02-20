@@ -1,0 +1,191 @@
+/*
+ * http://github.com/peteboere/css-crush (v2.4.0)
+ */
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.1 Links
+--------------------------------------------------------------*/
+@font-face {
+    font-family: 'mistral';
+    src: url(css/fonts/mistral/mistral-webfont.eot);
+    src: url(css/fonts/mistral/mistral-webfont.eot?#iefix) format('embedded-opentype'),url(css/fonts/mistral/mistral-webfont.woff) format('woff'),url(css/fonts/mistral/mistral-webfont.ttf) format('truetype'),url(css/fonts/mistral/mistral-webfont.svg#mistralregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+body,
+button,
+input,
+select,
+textarea {
+    color: #404040;
+    font-family: sans-serif;
+    line-height: 1.5;
+    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    clear: both;
+    }
+p {
+    margin-bottom: 1.5em;
+    }
+b,
+strong {
+    font-weight: bold;
+    }
+dfn,
+cite,
+em,
+i {
+    font-style: italic;
+    }
+blockquote {
+    margin: 0 1.5em;
+    }
+address {
+    margin: 0 0 1.5em;
+    }
+pre {
+    background: #eee;
+    font-family: "Courier 10 Pitch",Courier,monospace;
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.6em;
+    }
+code,
+kbd,
+tt,
+var {
+    font: 15px Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
+    }
+abbr,
+acronym {
+    border-bottom: 1px dotted #666;
+    cursor: help;
+    }
+mark,
+ins {
+    background: #fff9c0;
+    text-decoration: none;
+    }
+sup,
+sub {
+    font-size: 75%;
+    height: 0;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    }
+sup {
+    bottom: 1ex;
+    }
+sub {
+    top: .5ex;
+    }
+small {
+    font-size: 75%;
+    }
+big {
+    font-size: 125%;
+    }
+a {
+    color: royalblue;
+    }
+a:visited {
+    color: midnightblue;
+    }
+a:hover,
+a:focus,
+a:active {
+    color: midnightblue;
+    }
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: midnightblue;
+    padding-bottom: 20px;
+    }
+h2 {
+    font-family: 'mistral';
+    font-size: 30px;
+    line-height: 30px;
+    color: midnightblue;
+    border-bottom: 2px solid midnightblue;
+    margin-bottom: 20px;
+    }
+h3 {
+    font-family: 'mistral';
+    font-size: 24px;
+    color: midnightblue;
+    padding-bottom: 20px;
+    }
+h4 {
+    font-weight: 700;
+    color: midnightblue;
+    padding-bottom: 20px;
+    }
+p {
+    margin-bottom: 15px;
+    }
+h2 a,
+h3 a {
+    color: midnightblue;
+    }
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+hr {
+    background-color: #34498a;
+    border: 0;
+    height: 2px;
+    margin-bottom: 1.5em;
+    }
+ul,
+ol {
+    margin: 0 0 1.5em 1.5em;
+    }
+ul {
+    list-style: disc;
+    }
+li {
+    padding-top: 1em;
+    }
+ol {
+    list-style: decimal;
+    }
+ol ol {
+    list-style: lower-alpha;
+    }
+ol ol ol {
+    list-style: lower-roman;
+    }
+dt {
+    font-weight: bold;
+    }
+dd {
+    margin: 0 1.5em 1.5em;
+    }
+img {
+    height: auto;
+    max-width: 100%;
+    }
+figure {
+    margin: 0;
+    }
+table {
+    margin: 0 0 1.5em;
+    width: 100%;
+    }
+th {
+    font-weight: bold;
+    }

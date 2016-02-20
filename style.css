@@ -52,9 +52,17 @@ and Blueprint http://www.blueprintcss.org/
 1.0 - Reset
 --------------------------------------------------------------*/
 @import "css/reset.css";
-
+@set {
+    editor false;
+    text-color: #4f7566;
+    link-act: #34498a;
+    link: #384E8C;
+}
 /*--------------------------------------------------------------
 2.0 Typography
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+2.1 Links
 --------------------------------------------------------------*/
 @import "css/typography.css";
 /*--------------------------------------------------------------
@@ -136,20 +144,8 @@ textarea {
 5.0 Navigation
 --------------------------------------------------------------*/
 @import "css/nav.css";
-/*--------------------------------------------------------------
-5.1 Links
---------------------------------------------------------------*/
-a {
-    color: royalblue;
-}
-a:visited {
-    color: purple;
-}
-a:hover,
-a:focus,
-a:active {
-    color: midnightblue;
-}
+
+
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -284,77 +280,20 @@ ALL VIEWPORTS
 /*---------------------------------------
 GENERAL
 ---------------------------------------*/
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 
-@font-face {
-    font-family: 'mistral';
-    src: url('fonts/mistral/mistral-webfont.eot');
-    src: url('fonts/mistral/mistral-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/mistral/mistral-webfont.woff') format('woff'),
-         url('fonts/mistral/mistral-webfont.ttf') format('truetype'),
-         url('fonts/mistral/mistral-webfont.svg#mistralregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
 html{
     height: 100%;
 }
 
 body {
-        background: url(images/kl_bg4.jpg) no-repeat center center fixed;
+    background: url(images/kl_bg4.jpg) no-repeat center center fixed;
 }
 
 .clearfix{
     clear: both;
 }
 
-
-h1{
-    font-size: 30px;
-    font-weight: 700;
-    color: #34498a;
-    padding-bottom: 20px;
-}
-
-h2{
-    font-family: 'mistral';
-    font-size: 30px;
-    line-height: 30px;
-    color: #34498a;
-    border-bottom: 2px solid #34498a;
-    margin-bottom: 20px;
-}
-
-h3{
-    font-family: 'mistral';
-    font-size: 24px;
-    color: #34498a;
-    padding-bottom: 20px;
-}
-
-h4{
-    font-weight: 700;
-    color: #34498a;
-    padding-bottom: 20px;
-}
-
-p{
-    margin-bottom: 15px;
-}
-
-a, a:visited{
-    text-decoration: none;
-    color: #34498a;
-}
-
-a:hover, a:active{
-    color: #34498a;
-}
-
-h2 a, h3 a {
-    color: #34498a;
-}
 /*---------------------------------------
 HEADER
 ---------------------------------------*/
@@ -411,7 +350,6 @@ div.site-branding img {	background-image: url('images/logog.png');
     overflow: hidden;
     left: -75%;
     transition: left 0.5s ease;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
     opacity: 0.9;
     z-index: 99999;
 }
@@ -424,7 +362,7 @@ div.site-branding img {	background-image: url('images/logog.png');
     width: 100%;
     text-transform: uppercase;
     font-weight: 700;
-    border-bottom: 2px solid #4f7566;
+   /* border-bottom: 2px solid #4f7566;*/
 }
 
 #site-navigation a{
@@ -458,11 +396,8 @@ CONTENT
 #main{
     background: #fff;
     padding: 25px 10px;
-   /* -webkit-box-shadow: 0px 4px 9px 0px rgba(177, 194, 187, 0.6);
-    -moz-box-shadow:    0px 4px 9px 0px rgba(177, 194, 187, 0.6);*/
-    box-shadow:         0px 4px 9px 0px rgba(177, 194, 187, 0.6);
-  /*filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);*/
-  opacity: 0.9;
+    box-shadow: 0px 4px 9px 0px rgba(177, 194, 187, 0.6);
+    opacity: 0.9;
 }
 
 #main article {
@@ -479,11 +414,8 @@ CONTENT
     display: block;
     background: #cde0d8;
     text-transform: uppercase;
-/*		font-weight: bold; */
     margin: 35px 0;
-    -webkit-box-shadow: 0px 4px 10px 0px rgba(177, 194, 187, 1);
-    -moz-box-shadow:    0px 4px 10px 0px rgba(177, 194, 187, 1);
-    box-shadow:         0px 4px 10px 0px rgba(177, 194, 187, 1);
+    box-shadow: 0px 4px 10px 0px rgba(177, 194, 187, 1);
 }
 
 .promo_links a:active a:hover{
@@ -500,10 +432,7 @@ CONTENT
 .green-background{
     background: #cde0d8;
     padding: 25px 40px;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
     opacity: 0.85;
-    -webkit-box-shadow: 0px 4px 10px 0px rgba(177, 194, 187, 1);
-    -moz-box-shadow:    0px 4px 10px 0px rgba(177, 194, 187, 1);
     box-shadow:         0px 4px 10px 0px rgba(177, 194, 187, 1);
     /*z-index: -50;*/
 }
@@ -514,8 +443,6 @@ CONTENT
 
 iframe{
     margin: 15px 0;
-    -webkit-box-shadow: 0px 4px 9px 0px rgba(177, 194, 187, 0.6);
-    -moz-box-shadow:    0px 4px 9px 0px rgba(177, 194, 187, 0.6);
     box-shadow:         0px 4px 9px 0px rgba(177, 194, 187, 0.6);
 }
 
@@ -527,13 +454,7 @@ iframe{
 FOOTER
 ---------------------------------------*/
 .site-footer{
-    background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 59%, rgba(255,255,255,0) 69%, rgba(255,255,255,0) 75%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(59%,rgba(255,255,255,0)), color-stop(69%,rgba(255,255,255,0)), color-stop(75%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0) 69%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0) 69%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0) 69%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* IE10+ */
     background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 59%,rgba(255,255,255,0) 69%,rgba(255,255,255,0) 75%,rgba(255,255,255,0) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
 }
 
 #footer-content{
@@ -547,7 +468,6 @@ FOOTER
     background-image: url('images/gradent2.png');
     background-size: 394px 66px;
     background-repeat: no-repeat;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
     opacity: 0.85;
 }
 /* -------------------------------------------------------------
@@ -610,9 +530,7 @@ MEDIUM VIEWPORT
         position: static;
         width: 100%;
         padding: 0 30px;
-        -webkit-box-shadow: 0px 4px 10px 0px rgba(177, 194, 187, 1);
-        -moz-box-shadow:    0px 4px 10px 0px rgba(177, 194, 187, 1);
-        box-shadow:         0px 4px 10px 0px rgba(177, 194, 187, 1);
+        box-shadow: 0px 4px 10px 0px rgba(177, 194, 187, 1);
     }
 
     #site-navigation li{
@@ -692,7 +610,7 @@ LARGE VIEWPORT
         width: 960px;
         margin: 0px auto;
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
-          opacity: 0.95;
+        opacity: 0.95;
     }
 
     .container-desktop-nav{
@@ -747,9 +665,9 @@ LARGE VIEWPORT
     }
 }
 
-a{
+/*a{
 color: #34498a;
-}
+}*/
 
 .anchor{
     background: transparent url(images/anchor2.png) center left no-repeat;
@@ -760,9 +678,6 @@ color: #34498a;
 #page-container { height:100%; }
 
 body{
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     min-height: 100%;
     font-family: 'Droid Sans', sans-serif;
@@ -773,7 +688,10 @@ body{
 }
 
 @media print {
-    #site-navigation, .site-header, .sharedaddy {
+    #site-navigation, .site-header, .sharedaddy, #contact {
         display: none;
+    }
+    #copyright-single {
+        display: inline;
     }
 }

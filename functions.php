@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
     $content_width = 640; /* pixels */
 }
 // Minimize css
-define('CSS_MIN', true);
+define('CSS_MIN', false);
 define('CSS_PRODUCTION', false);
 
 // Make sure featured images are enabled
@@ -138,6 +138,27 @@ function muir_lake_scripts() {
 /* include the css crush pre processor*/
 /*require_once 'css-crush/CssCrush.php';*/
 add_action( 'wp_enqueue_scripts', 'muir_lake_scripts' );
+
+/*custom editor styles*/
+
+function my_theme_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.crush.css' );
+
+    if (CSS_PRODUCTION) {
+        add_editor_style( get_template_directory_uri() . 'custom-editor-style.crush.css' );
+    } else {
+        if ( !function_exists('csscrush_file')) {
+            require_once 'css-crush/CssCrush.php';
+        }
+        if (WP_DEBUG or !CSS_MIN) {
+            add_editor_style( 'http://' . $_SERVER['HTTP_HOST'] . csscrush_file(get_template_directory() . '/custom-editor-style.css' , array('minify' => 'false' , 'formatter' => 'block' ) ) );
+        } else {
+            add_editor_style( 'http://' . $_SERVER['HTTP_HOST'] . csscrush_file(get_template_directory() . '/custom-editor-style.css' ));
+        }
+    }
+}
+add_action( 'init', 'my_theme_add_editor_styles' );
+
 
 /**
  * Implement the Custom Header feature.
