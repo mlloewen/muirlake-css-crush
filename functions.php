@@ -12,8 +12,8 @@ if ( ! isset( $content_width ) ) {
     $content_width = 640; /* pixels */
 }
 // Minimize css
-define('CSS_MIN', false);
-define('CSS_PRODUCTION', false);
+define('CSS_MIN', true);
+define('CSS_PRODUCTION', true);
 
 // Make sure featured images are enabled
 add_theme_support( 'post-thumbnails' );
@@ -118,9 +118,9 @@ function muir_lake_scripts() {
     if (CSS_PRODUCTION) {
         wp_enqueue_style( 'muir-lake-church-style', get_template_directory_uri() . '/style.crush.css' );
     } else {
-        if ( !function_exists('csscrush_file')) {
+        /* if ( !function_exists('csscrush_file')) {
             require_once 'css-crush/CssCrush.php';
-        }
+        } */
         if (WP_DEBUG or !CSS_MIN) {
             wp_enqueue_style( 'muir-lake-church-style', 'http://' . $_SERVER['HTTP_HOST'] . csscrush_file(get_template_directory() . '/style.css' , array('minify' => 'false' , 'formatter' => 'block' ) ));
         } else {
